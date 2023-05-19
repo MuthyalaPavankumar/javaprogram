@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>bom</title>
+<meta charset="UTF=8">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<style>
+h1{
+  text-align:center;
+  font-size:50px;
+  color:green;
+ }
+h2{
+ text-align:center;
+  font-size:40px;
+ }
+</style>
+</head>
+<body onload="setInterval(myfun,2000)">
+<h2>welcome to my page<h2>
+<h1 id="head"></h1>
+
+<script>
+function myfun()
+{
+  var a="rakesh";
+  var b="akhil";
+  var c="varma";
+  var x=document.getElementById("head").innerHTML;
+  if(x=="" || x=="varma")
+  {
+   document.getElementById("head").innerHTML=a;
+  }
+  else if(x=="rakesh")
+  {
+    document.getElementById("head").innerHTML=b;
+  }
+  else
+  {
+    document.getElementById("head").innerHTML=c;
+  }
+  
+}
+</script>
+</body>
+</html>

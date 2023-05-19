@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Date methods</title>
+<meta charset="UTF=8">
+<meta name="viewport" content="width=device-width initial-scale=1.0">
+<style>
+body
+{
+  background-image:url("1.gif");
+  background-size:cover;
+  
+  }
+h1{
+  text-align:center;
+  font-size:50px;
+  color:black;
+ }
+#headd{
+width:210px;
+margin:0px auto;
+color:white;
+background:black;
+border-radius:10px;
+} 
+.main
+{
+   width:30%;
+   text-align:center;
+   margin:0px auto;
+   background-color:#ede8c5;
+   border-radius:20px;
+   padding:30px 0px;
+   margin-top:50px;
+   }
+
+</style>
+</head>
+<body onload="setInterval(myfun,1000)">
+<div class="main">
+<h1 >TODAY</h1>
+<h1 id="head"></h1>
+<h1 id="headd"></h1>
+</div>
+<script>
+function myfun()
+{
+  var x=new Date();
+  var a=x.getDate();
+  var b=x.getMonth();
+  var c=x.getFullYear();
+  var d=x.getHours();
+  var e=x.getMinutes();
+  var f=x.getSeconds();
+  var x=document.getElementById("head").innerHTML;
+  if(x=="")
+  {
+   document.getElementById("head").innerHTML=a;
+  }
+  else if(x==a)
+  {
+    document.getElementById("head").innerHTML+="&nbsp;"+b;
+  }
+  else if(x==a+"&nbsp;"+b)
+  {
+   document.getElementById("head").innerHTML+="&nbsp;"+c;
+  }
+  else if(x==a+"&nbsp;"+b+"&nbsp;"+c)
+  {
+   document.getElementById("headd").innerHTML=d+":"+e+":"+f;
+  }
+}
+</script>
+</body>
+</html>

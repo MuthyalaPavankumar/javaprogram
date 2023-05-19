@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Date methods</title>
+<meta charset="UTF=8">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<style>
+h1{
+  text-align:center;
+  font-size:50px;
+  color:green;
+ }
+#headd{
+width:210px;
+margin:0px auto;
+color:white;
+background:navy;
+} 
+</style>
+</head>
+<body onload="setInterval(myfun,1000)">
+<h1 style="background:powderblue">Date methods</h1>
+<h1 id="head"></h1>
+<h1 id="headd"></h1>
+<script>
+function myfun()
+{
+  var x=new Date();
+  var a=x.getDate();
+  var b=x.getMonth()+1;
+  var c=x.getFullYear();
+  var d=x.getHours();
+  var e=x.getMinutes();
+  var f=x.getSeconds();
+  var x=document.getElementById("head").innerHTML;
+  if(x=="")
+  {
+   document.getElementById("head").innerHTML=a;
+  }
+  else if(x==a)
+  {
+    document.getElementById("head").innerHTML+="&nbsp;"+b;
+  }
+  else if(x==a+"&nbsp;"+b)
+  {
+   document.getElementById("head").innerHTML+="&nbsp;"+c;
+  }
+  else
+  {
+   document.getElementById("headd").innerHTML=d+":"+e+":"+f;
+  }
+}
+</script>
+</body>
+</html>

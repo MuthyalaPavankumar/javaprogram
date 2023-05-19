@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>validation</title>
+<meta charset="utf-8">
+<style>
+*
+{
+margin 0px;
+padding:0px;
+}
+
+span
+{
+display:none;
+color:red;
+
+
+}
+form
+{
+width:45%;
+padding:20px;
+margin:0px auto;
+background:yellow;
+}
+input
+{
+padding:10px;
+margin:5px auto;
+
+
+}
+</style>
+</head>
+<body>
+<form>
+<h1 align="center"> form</h1>
+<table align="center">
+<tr>
+
+   <td align="right"><label>Name &nbsp;</label></td>
+	<td><input type="text" name="name"id="name" onkeypress="myfun1()"></td>
+<td><span id ="x">enter 6 to 16 chars </span></td>
+</tr>
+<tr>
+
+   <td align="right"><label>email &nbsp;</label></td>
+	<td><input type="email" name="email" id="email" onkeypress="myfun1()"></td>
+	<td><span id ="y">enter valid email</span></td>
+</tr>
+<tr>
+
+   <td align="right"><label>Pasword &nbsp;</label></td>
+	<td><input type="text" name="password" id ="pwd" onkeypress="myfun1()"></td>
+	<td><span id ="z">enter correct password</span></td>
+</tr>
+<tr>
+
+   <td align="right"><label>Retype password &nbsp;</label></td>
+	<td><input type="text" name="Retype password" id="rpwd" onkeypress="myfun1()"></td>
+	<td><span id ="xx">passwords mismtched </span></td>
+</tr>
+<tr>
+
+   <td align="right"><label>Phone Number &nbsp;</label>
+	<td><input type="tel" name="phone number"id="pno" onkeypress="myfun1()"></td>
+	<td><span id ="xy">enter correct no</span></td>
+</tr>
+<tr>
+
+   <td align="right"><label>Gender &nbsp;</label></td>
+	<td><input type="radio" name="male" id="male" onchange="myfun1()">male
+	<input type="radio" name="female"   id="female"  onchange="myfun1()">female
+	<td><span id ="xz">please select gender</span></td>
+</tr>
+<tr>
+
+<td></td><td><input type="submit" value="submit" onclick=" return valid()">
+</td>
+</tr>
+
+
+</table>
+
+</form>
+<script>
+var x=document.getElementById("x");
+var y=document.getElementById("y");
+var z=document.getElementById("z");
+var xx=document.getElementById("xx");
+var xy=document.getElementById("xy");
+var xz=document.getElementById("xz");
+
+function valid()
+{
+var name=document.getElementById("name").value;
+var email=document.getElementById("email").value;
+var pwd=document.getElementById("pwd").value;
+var rpwd=document.getElementById("rpwd").value;
+var pno=document.getElementById("pno").value;
+var m=document.getElementById("male").checked;
+var f=document.getElementById("female").checked;
+
+
+if (name.length<6 || name.length>16)
+{
+x.style.display="inline";
+return false;
+}
+
+
+else if(email.length<6 ||  email.length>16)
+{
+y.style.display="inline";
+return false;
+}
+
+else if(pwd.length<6 || pwd.length>16)
+{
+
+z.style.display="inline";
+return false;
+
+}
+else if(pwd!=rpwd)
+{
+
+xx.style.display="inline";
+return false;
+}
+
+else if (pno.length!=10)
+{
+xy.style.display="inline";
+return false;
+}
+ else if (m==false && f==false)
+ {
+ 
+ xz.style.display="inline";
+ return false;
+ }
+}
+function myfun1()
+{
+x.style.display="none";
+y.style.display="none";
+z.style.display="none";
+xx.style.display="none";
+xy.style.display="none";
+xz.style.display="none";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

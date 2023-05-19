@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>javascript</title>
+<meta charset="utf-8">
+<!-- <link rel="stylesheet" type="text/css" href="js.css"> -->
+</head>
+<body>
+<form action="" method="post">
+<!-- name<input type="text" name="name" id="aa" onkeyup="myfun()"><br> -->
+<table>
+<tr>
+<label>email</label>
+<td><input type="email" name="email" id="email"><br></td>
+</tr>
+
+<label>password</label>
+<tr>
+<td><input type="password" name="pwd" id="pwd"></td>
+</tr>
+<tr>
+
+<td><input type="checkbox" name="check" id="check" onchange="myfun()">Show Password</td>
+<!-- <span id="demo"></span> -->
+</tr>
+</form>
+</table>
+<script>
+function myfun()
+{
+var x=document.getElementById("pwd")
+if(x.type==="password")
+{
+   x.type="text";
+
+}
+else
+   {
+     x.type="password";
+    }
+}
+
+
+
+
+
+
+</script>

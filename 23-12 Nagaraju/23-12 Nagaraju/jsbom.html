@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model</title>
+</head>
+<style>
+body
+{
+   background-color:#ede8c5;
+ }
+h1{
+  text-align:center;
+  font-size:50px;
+  color:#fff;
+  background-color:black;
+  width:30%;
+  margin:0px auto;
+  border-radius:10px;
+ }
+h2{
+ text-align:center;
+  font-size:40px;
+ }
+</style>
+</head>
+<body onload="setInterval(myfun,3000)">
+<h2>WELCOME TO MY WORLD<h2>
+<h1 id="head"></h1>
+<script>
+function myfun()
+{
+  var a="NAGARAJU";
+  var b="GANESH";
+  var c="PAVAN";
+  var x=document.getElementById("head").innerHTML;
+  if(x=="")
+  {
+   document.getElementById("head").innerHTML=a;
+  }
+  else if(x=="NAGARAJU")
+  {
+    document.getElementById("head").innerHTML=b;
+  }
+  else if(x=="GANESH")
+  {
+    document.getElementById("head").innerHTML=c;
+  }
+  
+}
+</script>
+</body>
+
+</html>

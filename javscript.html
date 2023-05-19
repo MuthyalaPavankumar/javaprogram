@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>javascript</title>
+<meta charset="utf-8">
+<!-- <link rel="stylesheet" type="text/css" href="js.css"> -->
+</head>
+<body>
+<form action="" method="post">
+full amount<input type="text" name="a" id="aa" onkeyup="myfun()"><br>
+paid amount<input type="text" name="b" id="bb" onkeyup="myfun()"><br>
+Due amount<input type="text" name="c" id="cc" onkeyup="myfun()"><span id="demo"></span>
+</form>
+
+<script>
+function myfun()
+{
+var x=document.getElementById("aa");
+var y=document.getElementById("bb");
+var z=document.getElementById("cc");
+z.value = x.value-y.value
+    
+	if(z.value<0)
+	{
+	document.getElementById("demo").innerHTML="invalid details";
+	document.getElementById("demo").style.color="red";
+	}
+
+}
+
+
+
+</script>

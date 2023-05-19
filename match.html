@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>match</title>
+<meta charset="utf-8">
+</head>
+<body>
+<img src="CGS42139.jpg"width="200px" height="200px" id="img"><br>
+<button id="btn" onclick="valid()">on</button>
+</body>
+<script>
+function valid()
+{
+var x=document.getElementById("img");
+if(x.src.match("CGS42139.jpg"))
+{
+x.src="CGS42152.jpg";
+document.getElementById("btn").innerHTML="lAPPY";
+}
+
+else
+{
+x.src="CGS42139.jpg";
+document.getElementById("btn").innerHTML="TABLET";
+}
+
+
+
+}
+
+
+
+
+
+
+</script>
